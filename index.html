@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sumarização</title>
+    <meta charset="utf-8">
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="controll.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="JS/voice.js"></script>
+</head>
+<body>
+<center>
+	<h1>Text Summarizer</h1>
+	<strong>Summarize: </strong><input type="number" id="percentage" value="50" maxlength="3" min="10" max="70" / >%
+	<div class="panel"><br><br>
+		<textarea rows="15" cols="60" id="txt" class="input">
+Entertainment company Netflix has severed ties with Kevin Spacey, star of its House of Cards show, amid a number of sex assault allegations against him. Netflix said it would hold talks with the producers to see if production, which was suspended this week, could resume without Spacey. Netflix also said it would not release Spacey's film about writer Gore Vidal. Meanwhile, police in the UK have opened an investigation into the American actor over an alleged sexual assault. A British actor said he had woken up to find Spacey performing a sex act on him in 2008, the Sun newspaper reported. The man is said to have run from the property after Spacey allegedly said: "Don't tell anyone about this." Spacey said on Thursday he was seeking treatment after facing allegations of sexual misconduct from a string of men. Netflix suspended production on House of Cards on 31 October following allegations by Star Trek actor Anthony Rapp, who said Spacey had tried to "seduce" him when he was 14. Spacey said he was "beyond horrified" to hear of the incident, which he said he did not remember. 'Hiatus time' House of Cards, which is based on a BBC programme, was first broadcast in 2013. The first season garnered nine Emmy nominations, becoming the first online streaming series to win such mainstream accolades. "Netflix will not be involved with any further production of House of Cards that includes Kevin Spacey," a company spokesperson said in a statement. "We will continue to work with MRC [series producer Media Rights Capital] during this hiatus time to evaluate our path forward as it relates to the show. "We have also decided we will not be moving forward with the release of the film Gore, which was in post-production, starring and produced by Kevin Spacey." MRC said in a statement earlier that it was "deeply troubled" about the allegations against Spacey. It said it had dealt with one incident in 2012 in which an unnamed crew member "shared a complaint about a specific remark and gesture made by Kevin Spacey", that immediate action had been taken and that the issue had been resolved.
+		</textarea>
+		<textarea rows="15" cols="60" id="summ" class="input"></textarea>
+		<br />
+		
+	</div>
+	<img src="img/button_summarize.png" id="send" value="Send" />
+	<br><br><br>
+	<strong>It was developed by <a href="https://www.facebook.com/profile.php?id=100004277626091">Alan Nunes</a> by the theory <a href="http://www.lbd.dcc.ufmg.br/colecoes/enia/2011/006.pdf">BLMSumm</a><br>
+		Contact: alann.625@gmail.com<br/>
+		Phone Number: 5524998844351<br/>
+		<a href="https://github.com/AlanNunes/TextSummarizer">My GitGub</a> 
+	</strong>
+</center>
+
+<script>
+
+$("#send").click(function(){
+	var text = $("#txt").val();
+	var percentage = $("#percentage").val();
+
+	if ( text != '' && ( percentage >=10 && percentage <= 100 ))
+	{
+		setOriginalText(text);
+		setText(text);
+		summarize(percentage);
+	}
+	else
+	{
+		alert('Informe um valor válido');
+	}
+
+	
+});
+</script>
+</body>
+</html>

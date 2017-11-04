@@ -1,0 +1,43 @@
+body {
+	border: 0px;
+    background: #D1A020;
+	/*background-image: url(img/BG.jpg);*/
+    background-repeat: no-repeat;
+}
+.panel{
+	/*display: flex;*/
+	margin: 0;
+}
+.input{
+	border: solid black 1px;
+	margin: 25px;
+}
+#txt{
+    font-family: Comic;
+    color:darkblue;
+    text-decoration-style: solid;
+    padding: 8px;
+    /*overflow: hidden;*/
+	max-width: 400px;
+	border-radius: 2%;
+	background: #f7f7f7;
+    background-image: url(img/fundotexto.jpg);
+    opacity: 0.9;
+    font-size: 16px;
+}
+#summ{
+    font-family: Comic;
+    color:darkblue;
+    text-decoration-style: solid;
+    padding: 8px;
+    /*overflow: hidden;*/
+	max-width: 400px;
+	border-radius: 2%;
+    background-image: url(img/fundotexto.jpg);
+    opacity: 0.9;
+    font-size: 16px;
+}
+#percentage,input{
+    font-family: Arial;
+    padding: 5px;;
+}
